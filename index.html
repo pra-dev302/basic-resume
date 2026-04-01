@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Making</title>
+    <link rel="styleSheet" href="style.css">
+    <link rel="styleSheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+    <!--for user data -->
+    <div class="userInputData">
+        <h1 id="forTitle">RESUME MAKER</h1>
+        <h2>Let's Make Resume</h2>
+        <form>
+            <label for="labelName">Name</label>
+            <input type="text" id="inpName" placeholder="Enter full name">
+            <label for="labelNumber">Contact Number</label>
+            <input type="tel" id="inpNumber" pattern="[0-9]{10}" name="phone" placeholder="Enter contact number">
+            <label for="labelAdd">Address</label>
+            <input type="email" id="inpAdd" name="address" placeholder="Enter address">
+            <label for="labelEmail">Email</label>
+            <input type="email" id="inpEmail" name="email" placeholder="Enter email id">
+            <label for="labelEdu">Education</label>
+            <textarea id="inpEdu"></textarea>
+            <label for="labelSkill">Skills</label>
+            <textarea id="inpSkill"></textarea>
+            <label for="labelAbout">About</label>
+            <textarea id="inpAbout"></textarea>
+            <label for="labelProject">Project</label>
+            <textarea id="inpProject"></textarea>
+            <label for="labelExperience">Experience</label>
+            <textarea id="inpExp"></textarea>
+
+            <button type="button" onclick="btnClick()">Generate Resume</button>
+        </form>
+    </div>
+
+    <!--for display resume data  -->
+    <div class="resumeContainer">
+        <div class="readyResume">
+            <h1 id="forName"></h1>
+            <hr>
+            <div class="container1">
+                <div class="img1">
+                    <i class="fa-solid fa-phone"></i>
+                    <h4 id="userNumber"></h4>
+                </div>
+                <div class="img2">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4 id="userAddress"></h4>
+                </div>
+                <div class="img3">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4 id="userEmail"></h4>
+                </div>
+            </div>
+            <hr>
+            <div class="container2">
+                <h3>ABOUT ME</h3>
+                <hr>
+                <p id="forAboutMe"></p>
+            </div>
+            <div class="container3">
+                <h3>EDUCATION</h3>
+                <hr>
+                <ul id="forEducation"></ul>
+            </div>
+            <div class="container4">
+                <h3>SKILLS
+                </h3>
+                <hr>
+                <ul id="forSkill"></ul>
+            </div>
+            <div class="container5">
+                <h3>PROJECT</h3>
+                <hr>
+                <ul id="forProject"></ul>
+            </div>
+            <div class="container6">
+                <h3>EXPERIENCE</h3>
+                <hr>
+                <ul id="forExperience"></ul>
+            </div>
+        </div>
+
+        <div class="download">
+            <button id="pdf" onclick="btnPdf()">Download PDF</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
